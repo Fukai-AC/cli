@@ -1,0 +1,49 @@
+#!/usr/local/bin/node
+const program = require('commander');
+const join = require('path').join;
+const exists = require('fs').existsSync;
+var spawn = require('cross-spawn');
+
+program
+  .version(require('../package').version, '-v, --version')
+  .usage('<command> [options]')
+  .on('--help', consoleHelp)
+  .parse(process.argv);
+
+const alia = {
+  g: 'generate',
+}
+const args = process.argv.slice(3);
+let subCmd = program.args[0];
+if (alia[subCmd]) subCmd = alia[subCmd];
+
+if (!subCmd) {
+  program.help();
+} else {
+  const file = executable(subCmd);
+  if (file) {
+    wrap(spawn(file, args, {stdio: 'inherit'}));
+  } else {
+    program.help();
+  }
+}
+
+function wrap(ps) {
+  ps.on('close', function(code) {
+    process.exit(code);
+  })
+}
+
+function executable(subCmd) {
+  let file = join(__dirname, 'fc-' + subCmd);
+  if (exists(file)) {
+    return file;
+  }
+}
+
+function consoleHelp() {
+  console.log('  Commands:');
+  console.log();
+  console.log('');
+  console.log(program.args);
+}

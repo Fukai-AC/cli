@@ -1,0 +1,25 @@
+{
+  "name": "cli",
+  "version": "1.0.0",
+  "description": "",
+  "bin": {
+    "fcm": "./bin/fc"
+  },
+  "scripts": {
+    "build": ""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Fukai-AC/cli.git"
+  },
+  "author": "wangfukai",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Fukai-AC/cli/issues"
+  },
+  "homepage": "https://github.com/Fukai-AC/cli#readme",
+  "dependencies": {
+    "commander": "^2.11.0",
+    "fs-extra": "^3.0.1"
+  }
+}

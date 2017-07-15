@@ -1,0 +1,8 @@
+const program = require('commander');
+
+program
+  .parse(process.argv);
+
+require('../lib/generate')(program, {
+  cwd: process.cwd(),
+});
