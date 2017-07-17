@@ -1,4 +1,5 @@
-const program = require('commander');
+#!/usr/local/bin/node
+const program = require("commander");
 
 program
   .parse(process.argv);
