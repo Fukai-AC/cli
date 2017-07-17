@@ -1,0 +1,37 @@
+import * as React from 'react';
+import * as cx from 'classnames';
+import { connect } from 'react-redux';
+
+import { bind_actions } from 'src/utils/bind_action';
+import { intl, intlMessage } from 'src/utils/i18n';
+let style = require('./index.scss');
+
+type <%= cmpName%>Props = {};
+type <%= cmpName%>State = {};
+
+export class <%= cmpName%> extends React.Component<<%= cmpName%>Props, Partial<<%= cmpName%>State>> {
+  constructor(props:any, context:any) {
+    super(props, context);
+    this.state = {};
+  }
+  render() {
+    return (<div></div>);
+  }
+}
+<% if (moduleCmp) { %>
+const map_state_to_props = (state:any) => {
+  return {};
+};
+
+const map_dispatch_to_props = (dispatch:any) => {
+  return bind_actions(
+    {},
+    dispatch,
+  );
+};
+
+export let <%= cmpName%>Container = connect(
+  map_state_to_props,
+  map_dispatch_to_props,
+)(<%= cmpName%>);
+<% } %>
