@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "bin": {
-    "fc": "./bin/fc"
+    "fcl": "./bin/fc"
   },
   "scripts": {
     "build": ""
