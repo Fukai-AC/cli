@@ -44,6 +44,7 @@ function executable(subCmd) {
 function consoleHelp() {
   console.log('  Commands:');
   console.log();
-  console.log('');
-  console.log(program.args);
+  console.log('    generate(short-cut alias: "g") [component or route] [name] [path]');
+  console.log();
+  console.log('   run -h (or --help) for more information.')
 }
