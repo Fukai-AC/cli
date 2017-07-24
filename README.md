@@ -18,7 +18,7 @@ fcl g route myroute
 
 ## Configuration
 
-### fcl generate(short-cut alias: 'g') [type] [name] [path]
+### fcl generate(short-cut alias: 'g') [type] [name] [path]  
 
 Generate route and component.  
 [path]: default components path - src/components  
@@ -27,6 +27,6 @@ default route path - src/routes
 #### Usage Examples
 
 ```bash
-$ fcl g route product-list
+$ fcl g route product
 $ fcl g component mycomponent
 ```
