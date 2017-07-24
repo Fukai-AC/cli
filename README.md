@@ -18,7 +18,7 @@ fcl g route myroute
 
 ## Configuration
 
-### fcl generate [type] [name] [path] (short-cut alias: 'g')
+### fcl generate(short-cut alias: 'g') [type] [name] [path]
 
 Generate route and component.  
 [path]: default components path - src/components  
