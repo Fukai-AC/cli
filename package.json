@@ -1,9 +1,9 @@
 {
-  "name": "fcm-cli",
+  "name": "fc-cli",
   "version": "1.0.0",
   "description": "",
   "bin": {
-    "fcm": "./bin/fc"
+    "fc": "./bin/fc"
   },
   "scripts": {
     "build": ""
