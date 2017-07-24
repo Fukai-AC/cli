@@ -1,0 +1,8 @@
+module.exports = {
+  path: '<%= routeName%>',
+  getComponent(nextState:any, cb:any) {
+    require.ensure([], (require:any) => {
+      cb(undefined, require('./index').<%= cmpName%>);
+    });
+  },
+};

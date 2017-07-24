@@ -1,10 +1,11 @@
 import * as React from 'react';
 import * as cx from 'classnames';
+import * as CSSModules from 'react-css-modules';
 import { connect } from 'react-redux';
 
 import { bind_actions } from 'src/utils/bind_action';
 import { intl, intlMessage } from 'src/utils/i18n';
-let style = require('./index.scss');
+const style = require('./index.scss');
 
 type <%= cmpName%>Props = {};
 type <%= cmpName%>State = {};
@@ -33,5 +34,5 @@ const map_dispatch_to_props = (dispatch:any) => {
 export let <%= cmpName%>Container = connect(
   map_state_to_props,
   map_dispatch_to_props,
-)(<%= cmpName%>);
+)(CSSModules(<%= cmpName%>, style, { allowMultiple: true }));
 <% } %>
