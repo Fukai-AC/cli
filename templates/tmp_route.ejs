@@ -1,4 +1,4 @@
-module.exports = {
+export let <%= routeName%>_route = {
   path: '<%= routeName%>',
   getComponent(nextState:any, cb:any) {
     require.ensure([], (require:any) => {
