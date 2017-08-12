@@ -1,7 +1,10 @@
-import * as _ from 'lodash';
-import { Action } from 'src/utils/action_creator';
-import { combineReducers } from 'redux';
+import { remove } from 'lodash';
+import { handleActions } from 'redux-actions';
 
-import { update_state } from 'src/utils/base';
+import { create_action, Action } from 'src/utils/redux_base';
 
-export let <%= reducerName%> = combineReducers({});
+export type State = {};
+export const initial_state : State = {};
+export const <%= reducerName%> = handleActions(
+  { },
+  initial_state);

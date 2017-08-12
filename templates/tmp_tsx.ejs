@@ -2,9 +2,8 @@ import * as React from 'react';
 import * as cx from 'classnames';
 import * as CSSModules from 'react-css-modules';
 import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
 
-import { bind_actions } from 'src/utils/bind_action';
-import { intl, intlMessage } from 'src/utils/i18n';
 const style = require('./index.scss');
 
 type <%= cmpName%>Props = {};
@@ -25,7 +24,7 @@ const map_state_to_props = (state:any) => {
 };
 
 const map_dispatch_to_props = (dispatch:any) => {
-  return bind_actions(
+  return bindActionCreators(
     {},
     dispatch,
   );
