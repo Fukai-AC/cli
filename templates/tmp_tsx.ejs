@@ -9,6 +9,7 @@ const style = require('./index.scss');
 type <%= cmpName%>Props = {};
 type <%= cmpName%>State = {};
 
+@CSSModules(style, { allowMultiple: true })
 export class <%= cmpName%> extends React.Component<<%= cmpName%>Props, Partial<<%= cmpName%>State>> {
   constructor(props:any, context:any) {
     super(props, context);
@@ -33,5 +34,5 @@ const map_dispatch_to_props = (dispatch:any) => {
 export let <%= cmpName%>Container = connect(
   map_state_to_props,
   map_dispatch_to_props,
-)(CSSModules(<%= cmpName%>, style, { allowMultiple: true }));
+)(<%= cmpName%>);
 <% } %>
