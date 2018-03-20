@@ -1,6 +1,6 @@
 ![Logo of the project](./logo.png)
 
-# fc-cli
+# fc-cli
 > cli, nodejs
 
 A tool used for React best practice
