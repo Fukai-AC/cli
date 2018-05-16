@@ -4,6 +4,11 @@ const join = require('path').join;
 const exists = require('fs').existsSync;
 var spawn = require('cross-spawn');
 
+/*
+process.argv -> 返回命令行参数的数组:
+  第一个为nodejs进程的执行文件路径,
+  第二个为当前执行的JavaScript的文件路径,
+*/
 program
   .version(require('../package').version, '-v, --version')
   .usage('<command> [options]')
@@ -12,6 +17,7 @@ program
 
 const alia = {
   g: 'generate',
+  i: 'init',
 }
 const args = process.argv.slice(3);
 let subCmd = program.args[0];

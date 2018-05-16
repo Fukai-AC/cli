@@ -10,10 +10,15 @@ A tool used for React best practice
 ```shell
 #Install
 npm install fc-cli -g
+# create a single page app
+fcl i single *project name*
+# create a composite page app
+fcl i composite *project name*
+
 # create component
-fcl g component mycomponent
+fcl g component *component name*
 # create route
-fcl g route myroute
+fcl g route *route name*
 ```
 
 ## Configuration
