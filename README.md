@@ -11,14 +11,14 @@ A tool used for React best practice
 #Install
 npm install fc-cli -g
 # create a single page app
-fcl i single *project name*
+fcl i single my-project
 # create a composite page app
-fcl i composite *project name*
+fcl i composite my-project
 
 # create component
-fcl g component *component name*
+fcl g component my-component
 # create route
-fcl g route *route name*
+fcl g route my-route
 ```
 
 ## Configuration
